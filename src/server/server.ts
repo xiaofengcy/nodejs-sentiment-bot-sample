@@ -5,7 +5,7 @@ import * as path from 'path';
 import * as expressSession from 'express-session';
 import * as restify from 'restify';
 import * as builder from 'botbuilder';
-import {AuthHelper} from './helpers/AuthHelper';
+import {authHelper} from './helpers/authHelper';
 import searchDialog from './dialogs/searchDialog';
 
 export class Server {
