@@ -47,11 +47,7 @@ export class searchDialog implements IDialog {
                             text.push(messages[i].bodyPreview);
                         }
                         // use the sentiment helper to get sentiment score for the messages
-                        SentimentHelper.getSentimentScore(text).then((score) => {
-                            session.endConversation(`Sentiment Score: ${score}`);
-                        }, (err) => {
-                            session.endConversation(`Error occurred: ${err}`);
-                        });
+                       session.endConversation(`mail content:${text}`);
                         }).catch((err) => {
                             console.log(err);
                             session.endConversation(`Error occurred: ${err}`);
