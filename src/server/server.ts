@@ -18,8 +18,8 @@ export class Server {
         const server = restify.createServer(https_options);
         const bot = new builder.UniversalBot(
             new builder.ChatConnector({
-                //appId: process.env.MICROSOFT_APP_ID,
-                //appPassword: process.env.MICROSOFT_APP_PASSWORD
+                appId: process.env.MICROSOFT_APP_ID,
+                appPassword: process.env.MICROSOFT_APP_PASSWORD
             })
         );
 
